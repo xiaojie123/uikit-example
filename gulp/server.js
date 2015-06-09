@@ -10,6 +10,10 @@ var browserSync = require('browser-sync');
 
 var middleware = require('./proxy');
 
+var $ = require('gulp-load-plugins')({
+  pattern: ['gulp-*', 'main-bower-files', 'uglify-save-license', 'del']
+});
+
 function browserSyncInit(baseDir, files, browser) {
   browser = browser === undefined ? 'default' : browser;
 
@@ -31,7 +35,7 @@ function browserSyncInit(baseDir, files, browser) {
   });
 }
 
-gulp.task('serve', ['watch'], function () {
+gulp.task('serve', ['copyFontToServe','watch'], function () {
   browserSyncInit([
     paths.tmp + '/serve',
     paths.src
@@ -43,6 +47,13 @@ gulp.task('serve', ['watch'], function () {
     paths.tmp + '/serve/{app,components}/**/*.html',
     paths.src + '/{app,components}/**/*.html'
   ]);
+});
+
+gulp.task('copyFontToServe', function () {
+  return gulp.src($.mainBowerFiles())
+    .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2,otf}'))
+    .pipe($.flatten())
+    .pipe(gulp.dest(paths.tmp + '/serve/fonts/'));
 });
 
 gulp.task('serve:dist', ['build'], function () {
