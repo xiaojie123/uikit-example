@@ -1,0 +1,75 @@
+/* theme: Default */
+
+body{
+  background: url("/assets/images/bg.jpg") no-repeat center center ;
+}
+
+.uk-close {
+  color:#444;
+}
+.uk-close:hover,
+.uk-close:focus {
+  color: #000;
+  cursor: pointer;
+}
+.head{
+  height:60px;
+  background-color:@panel-box-background ;
+}
+.head-left{
+
+}
+.uk-panel{
+  border-top: 1px solid @border-color;
+}
+@panel-box-background:#213245;
+.avc-panel{
+
+  opacity: 0.7;
+
+  height:459px;
+  background:@panel-box-background ;
+  position:relative;
+  .avc-panel-header{
+    background:@panel-box-background;
+    padding:@panel-box-padding;
+    font-size:@panel-title-font-size;
+    border-bottom:1px solid @border-color;
+    h1,h2,h3,h4,h5{
+      margin-bottom:0px;
+    }
+    .avc-panel-header-toolbar{
+      float: right;
+      margin:-@panel-box-padding;
+      a{
+        display:inline-block;
+        border-left:1px solid @border-color;
+        padding: @panel-box-padding;
+      }
+    }
+  }
+  .avc-panel-body{
+    padding:@panel-box-padding;
+  }
+}
+
+@nav-subtitle-line-height:100px;
+#myTab td{
+  line-height:60px;
+}
+@border-color: #58697D;
+#navside{
+  li.uk-parent{
+    line-height: 40px;
+    border-bottom:1px solid @border-color;
+  }
+  li.uk-parent:first-child{
+
+    border-top:1px solid @border-color;
+  }
+}
+
+#sideBar{
+  background:@panel-box-background;
+}
+

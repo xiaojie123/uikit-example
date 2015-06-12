@@ -1,0 +1,303 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        <%=locals.title%>
+    </title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="version" content="dev">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css({.tmp/serve,src}) /styles/vendor.css -->
+    <link rel="stylesheet" href="app/vendor.css">
+    <!-- bower:css -->
+    <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp/serve,src}) /styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automaticaly insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="uk-width-1-1 ">
+    <div class="uk-grid head">
+        <div class="uk-width-2-10 head-left">
+            <a class="uk-icon-button uk-icon-github" href="#"></a>
+            <a class="uk-icon-button uk-icon-twitter" href="#"></a>
+            <a class="uk-icon-button uk-icon-dribbble" href="#"></a>
+        </div>
+        <div class="uk-width-3-10 head-center">
+        </div>
+        <div class="uk-width-5-10 head-right"></div>
+    </div>
+</div>
+<div class="uk-grid uk-grid-small">
+    <div id="sideBar" class="uk-width-2-10">
+        <div class="uk-panel uk-panel-box uk-text-center">
+            <img height="120" width="120" alt=""
+                 src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTIwcHgiIGhlaWdodD0iMTIwcHgiIHZpZXdCb3g9IjAgMCAxMjAgMTIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjAgMTIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIi8+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjRTBFMEUwIiBkPSJNMTA5LjM1NCw5OS40NzhjLTAuNTAyLTIuODA2LTEuMTM4LTUuNDA0LTEuOTAzLTcuODAxYy0wLjc2Ny0yLjM5Ny0xLjc5Ny00LjczMi0zLjA5My03LjAxMQ0KCQljLTEuMjk0LTIuMjc2LTIuNzc4LTQuMjE3LTQuNDU1LTUuODIzYy0xLjY4MS0xLjYwNC0zLjcyOS0yLjg4Ny02LjE0OC0zLjg0NmMtMi40MjEtMC45NTgtNS4wOTQtMS40MzgtOC4wMTctMS40MzgNCgkJYy0wLjQzMSwwLTEuNDM3LDAuNTE2LTMuMDIsMS41NDVjLTEuNTgxLDEuMDMyLTMuMzY3LDIuMTgyLTUuMzU1LDMuNDVjLTEuOTksMS4yNzEtNC41NzgsMi40MjEtNy43NjUsMy40NTENCgkJQzY2LjQxLDgzLjAzNyw2My4yMSw4My41NTIsNjAsODMuNTUyYy0zLjIxMSwwLTYuNDEtMC41MTUtOS41OTgtMS41NDZjLTMuMTg4LTEuMDMtNS43NzctMi4xODEtNy43NjUtMy40NTENCgkJYy0xLjk5MS0xLjI2OS0zLjc3NC0yLjQxOC01LjM1NS0zLjQ1Yy0xLjU4Mi0xLjAyOS0yLjU4OC0xLjU0NS0zLjAyLTEuNTQ1Yy0yLjkyNiwwLTUuNTk4LDAuNDc5LTguMDE3LDEuNDM4DQoJCWMtMi40MiwwLjk1OS00LjQ3MSwyLjI0MS02LjE0NiwzLjg0NmMtMS42ODEsMS42MDYtMy4xNjQsMy41NDctNC40NTgsNS44MjNjLTEuMjk0LDIuMjc4LTIuMzI2LDQuNjEzLTMuMDkyLDcuMDExDQoJCWMtMC43NjcsMi4zOTYtMS40MDIsNC45OTUtMS45MDYsNy44MDFjLTAuNTAyLDIuODAzLTAuODM5LDUuNDE1LTEuMDA2LDcuODM1Yy0wLjE2OCwyLjQyMS0wLjI1Miw0LjkwMi0wLjI1Miw3LjQ0DQoJCWMwLDEuODg0LDAuMjA3LDMuNjI0LDAuNTgyLDUuMjQ3aDEwMC4wNjNjMC4zNzUtMS42MjMsMC41ODItMy4zNjMsMC41ODItNS4yNDdjMC0yLjUzOC0wLjA4NC01LjAyLTAuMjUzLTcuNDQNCgkJQzExMC4xOTIsMTA0Ljg5MywxMDkuODU3LDEwMi4yOCwxMDkuMzU0LDk5LjQ3OHoiLz4NCgk8cGF0aCBmaWxsPSIjRTBFMEUwIiBkPSJNNjAsNzguMTZjNy42MiwwLDE0LjEyNi0yLjY5NiwxOS41Mi04LjA4OGM1LjM5Mi01LjM5Myw4LjA4OC0xMS44OTgsOC4wODgtMTkuNTE5DQoJCXMtMi42OTYtMTQuMTI2LTguMDg4LTE5LjUxOUM3NC4xMjYsMjUuNjQzLDY3LjYyLDIyLjk0Niw2MCwyMi45NDZzLTE0LjEyOCwyLjY5Ny0xOS41MTksOC4wODkNCgkJYy01LjM5NCw1LjM5Mi04LjA4OSwxMS44OTctOC4wODksMTkuNTE5czIuNjk1LDE0LjEyNiw4LjA4OSwxOS41MTlDNDUuODcyLDc1LjQ2NCw1Mi4zOCw3OC4xNiw2MCw3OC4xNnoiLz4NCjwvZz4NCjwvc3ZnPg0K"
+                 class="uk-border-circle">
+
+            <h3>Author Name</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut.</p>
+        </div>
+        <ul data-uk-nav="{multiple:true}"  id="navside" class="uk-nav uk-nav-side uk-nav-parent-icon">
+            <!--<li class="uk-active"><a href="">Active</a></li>-->
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-home uk-icon-small"></i> Dashboard</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-sliders uk-icon-small"></i> Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-desktop uk-icon-small"></i> Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-comments-o uk-icon-small"></i> Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-edit uk-icon-small"></i> Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-bar-chart uk-icon-small"></i> Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-archive uk-icon-small"></i> Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-shield uk-icon-small"></i> Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-parent">
+                <a href="#"><i class="uk-icon-smile-o uk-icon-small"></i> Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="">Sub item</a></li>
+                    <li><a href="">Sub item</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="uk-width-8-10">
+        <div class="uk-grid uk-grid-small" style="margin-right: 10px;">
+            <div class="uk-width-3-10">
+                <div class="avc-panel">
+                    <div class="avc-panel-header">
+                        <h3 class="uk-panel-title"><i class="uk-icon-user"></i> Panel
+                            <div class="avc-panel-header-toolbar">
+                                <a class="uk-close" href="#"></a><a class="uk-close" href="#"></a>
+                            </div>
+                        </h3>
+
+                    </div>
+                    <div class="avc-panel-body">
+                        <div data-uk-alert="" class="uk-alert uk-alert-success">
+                            <a class="uk-alert-close uk-close" href=""></a>
+
+                            <p>To indicate success or a positive message add the  class.
+                            </p>
+                        </div>
+                        <div data-uk-alert="" class="uk-alert uk-alert-danger">
+                            <a class="uk-alert-close uk-close" href=""></a>
+
+                            <p>To indicate an important message add the  class.</p>
+                        </div>
+                        <div data-uk-alert="" class="uk-alert uk-alert-warning">
+                            <a class="uk-alert-close uk-close" href=""></a>
+
+                            <p>To indicate a message containing a warning add the class.
+                            </p>
+                        </div>
+                        <div data-uk-alert="" class="uk-alert uk-alert-warning">
+                            <a class="uk-alert-close uk-close" href=""></a>
+
+                            <p>To indicate a message containing a warning add the  class.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-7-10">
+                <div class="avc-panel">
+                    <div class="avc-panel-header">
+                        <h3 class="uk-panel-title"><i class="uk-icon-user"></i> Panel
+                            <div class="avc-panel-header-toolbar">
+                                <a class="uk-close" href="#"></a><a class="uk-close" href="#"></a>
+                            </div>
+                        </h3>
+                    </div>
+                    <div id="myTab" class="uk-overflow-container">
+                        <table class="uk-table  uk-table-condensed">
+                            <thead>
+                            <tr>
+                                <th>Post Description</th>
+                                <th>Date</th>
+                                <th>Post Info</th>
+                                <th>Del</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><article class="uk-comment">
+                                    <header class="uk-comment-header">
+                                        <img alt="50x50" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNTB4NTAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNS4yLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnMvPjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjUuNSIgeT0iMjkuOCIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0Ij41MHg1MDwvdGV4dD48L2c+PC9zdmc+" class="uk-comment-avatar" data-src="holder.js/50x50/auto" data-holder-rendered="true">
+                                        <h4 class="uk-comment-title">Author</h4>
+                                        <p class="uk-comment-meta">May 2, 2090 at 1:55 pm</p>
+                                    </header>
+                                    <div class="uk-comment-body">
+                                    </div>
+                                </article></td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td><a href="" class="uk-close uk-close-alt"></a></td>
+                            </tr>
+                            <tr>
+                                <td><article class="uk-comment">
+                                    <header class="uk-comment-header">
+                                        <img alt="50x50" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNTB4NTAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNS4yLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnMvPjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjUuNSIgeT0iMjkuOCIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0Ij41MHg1MDwvdGV4dD48L2c+PC9zdmc+" class="uk-comment-avatar" data-src="holder.js/50x50/auto" data-holder-rendered="true">
+                                        <h4 class="uk-comment-title">Author</h4>
+                                        <p class="uk-comment-meta">May 2, 2090 at 1:55 pm</p>
+                                    </header>
+                                    <div class="uk-comment-body">
+                                    </div>
+                                </article></td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td><a href="" class="uk-close uk-close-alt"></a></td>
+                            </tr>
+                            <tr>
+                                <td><article class="uk-comment">
+                                    <header class="uk-comment-header">
+                                        <img alt="50x50" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNTB4NTAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNS4yLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnMvPjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjUuNSIgeT0iMjkuOCIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0Ij41MHg1MDwvdGV4dD48L2c+PC9zdmc+" class="uk-comment-avatar" data-src="holder.js/50x50/auto" data-holder-rendered="true">
+                                        <h4 class="uk-comment-title">Author</h4>
+                                        <p class="uk-comment-meta">May 2, 2090 at 1:55 pm</p>
+                                    </header>
+                                    <div class="uk-comment-body">
+                                    </div>
+                                </article></td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td><a href="" class="uk-close uk-close-alt"></a></td>
+                            </tr>
+                            <tr>
+                                <td><article class="uk-comment">
+                                    <header class="uk-comment-header">
+                                        <img alt="50x50" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNTB4NTAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNS4yLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnMvPjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjUuNSIgeT0iMjkuOCIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0Ij41MHg1MDwvdGV4dD48L2c+PC9zdmc+" class="uk-comment-avatar" data-src="holder.js/50x50/auto" data-holder-rendered="true">
+                                        <h4 class="uk-comment-title">Author</h4>
+                                        <p class="uk-comment-meta">May 2, 2090 at 1:55 pm</p>
+                                    </header>
+                                    <div class="uk-comment-body">
+                                    </div>
+                                </article></td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td><a href="" class="uk-close uk-close-alt"></a></td>
+                            </tr>
+                            <tr>
+                                <td><article class="uk-comment">
+                                    <header class="uk-comment-header">
+                                        <img alt="50x50" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNTB4NTAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNS4yLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnMvPjxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjUuNSIgeT0iMjkuOCIgc3R5bGU9ImZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0Ij41MHg1MDwvdGV4dD48L2c+PC9zdmc+" class="uk-comment-avatar" data-src="holder.js/50x50/auto" data-holder-rendered="true">
+                                        <h4 class="uk-comment-title">Author</h4>
+                                        <p class="uk-comment-meta">May 2, 2090 at 1:55 pm</p>
+                                    </header>
+                                    <div class="uk-comment-body">
+                                    </div>
+                                </article></td>
+                                <td>Table Data</td>
+                                <td>Table Data</td>
+                                <td><a href="" class="uk-close uk-close-alt"></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-grid uk-grid-small" style="margin-right: 10px;">
+            <div class="uk-width-7-10">
+                <div class="avc-panel">
+                    <div class="avc-panel-header">
+                        <h3 class="uk-panel-title"><i class="uk-icon-user"></i> Panel
+                            <div class="avc-panel-header-toolbar">
+                                <a class="uk-close" href="#"></a><a class="uk-close" href="#"></a>
+                            </div>
+                        </h3>
+                    </div>
+                    <div class="avc-panel-body" fun="bb">
+                        <div style="height:300px; width: 500px;" id="chart2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-3-10">
+                <div class="avc-panel">
+                    <div class="avc-panel-header">
+                        <h3 class="uk-panel-title"><i class="uk-icon-user"></i> Panel
+                            <div class="avc-panel-header-toolbar">
+                                <a class="uk-close" href="#"></a><a class="uk-close" href="#"></a>
+                            </div>
+                        </h3>
+                    </div>
+                    <div class="avc-panel-body" fun="aa">
+                        <div style="height:300px; width: 200px;" id="chart3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- build:js(src) /scripts/vendor.js -->
+<!-- bower:js -->
+<!-- run `gulp wiredep` to automaticaly populate bower script dependencies -->
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:js({.tmp/serve,.tmp/partials,src}) /scripts/app.js -->
+<!-- inject:js -->
+<!-- js files will be automaticaly insert here -->
+<!-- endinject -->
+</body>
+
+</html>
