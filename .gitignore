@@ -3,6 +3,7 @@ node_modules/
 bower_components/
 .tmp/
 dist/
+act/
 server/public/
 server/views/
 server/npm-debug.log

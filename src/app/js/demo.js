@@ -1,146 +1,81 @@
 $(function () {
-    var allOption = document.createElement("option");//Ò³Ãæ¼ÓÔØÍê£¬×ßÕâÒ»²½£¬document.ready
-    aa();
-   bb();
-});
+    var allOption = document.createElement("option");//é¡µé¢åŠ è½½å®Œï¼Œèµ°è¿™ä¸€æ­¥ï¼Œdocument.ready
+    require.config({
+        paths: {
+            echarts: './bower_components/echarts/build/dist'
+        }
+    });
+        require(
+            [
+                'echarts',
+                'echarts/chart/line',   // æŒ‰éœ€åŠ è½½æ‰€éœ€å›¾è¡¨ï¼Œå¦‚éœ€åŠ¨æ€ç±»å‹åˆ‡æ¢åŠŸèƒ½ï¼Œåˆ«å¿˜äº†åŒæ—¶åŠ è½½ç›¸åº”å›¾è¡¨
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+        var myChart = ec.init(document.getElementById('chart3'));
 
-function aa () {
-
-    //µÚ¶ş²½ »ùÓÚ×¼±¸ºÃµÄdom£¬³õÊ¼»¯echartsÍ¼±í
-    var myChart = echarts.init(document.getElementById('chart3'));
-
-    option = {
-        title: {
-            text: 'Ä³µØÇøÕô·¢Á¿ºÍ½µË®Á¿',
-            subtext: '´¿ÊôĞé¹¹'
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            data: ['Õô·¢Á¿', '½µË®Á¿']
-        },
-        toolbox: {
-            show: true,
-            feature: {
-                mark: { show: true },
-                dataView: { show: true, readOnly: false },
-                magicType: { show: true, type: ['line', 'bar'] },
-                restore: { show: true },
-                saveAsImage: { show: true }
-            }
-        },
-        calculable: true,
-        xAxis: [
-            {
-                type: 'category',
-                data: ['1ÔÂ', '2ÔÂ', '3ÔÂ', '4ÔÂ', '5ÔÂ', '6ÔÂ', '7ÔÂ', '8ÔÂ', '9ÔÂ', '10ÔÂ', '11ÔÂ', '12ÔÂ']
-            }
-        ],
-        yAxis: [
-            {
-                type: 'value'
-            }
-        ],
-        series: [
-            {
-                name: 'Õô·¢Á¿',
-                type: 'bar',
-                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
-                markPoint: {
-                    data: [
-                        { type: 'max', name: '×î´óÖµ' },
-                        { type: 'min', name: '×îĞ¡Öµ' }
-                    ]
-                },
-                markLine: {
-                    data: [
-                        { type: 'average', name: 'Æ½¾ùÖµ' }
-                    ]
+        option = {
+            title : {
+                text: 'æŸæ¥¼ç›˜é”€å”®æƒ…å†µ',
+                subtext: 'çº¯å±è™šæ„'
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            legend: {
+                data:['æ„å‘','é¢„è´­','æˆäº¤']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    mark : {show: true},
+                    dataView : {show: true, readOnly: false},
+                    magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
                 }
             },
-            {
-                name: '½µË®Á¿',
-                type: 'bar',
-                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
-                markPoint: {
-                    data: [
-                        { name: 'Äê×î¸ß', value: 182.2, xAxis: 7, yAxis: 183, symbolSize: 18 },
-                        { name: 'Äê×îµÍ', value: 2.3, xAxis: 11, yAxis: 3 }
-                    ]
-                },
-                markLine: {
-                    data: [
-                        { type: 'average', name: 'Æ½¾ùÖµ' }
-                    ]
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : ['å‘¨ä¸€','å‘¨äºŒ','å‘¨ä¸‰','å‘¨å››','å‘¨äº”','å‘¨å…­','å‘¨æ—¥']
                 }
-            }
-        ]
-    };
-
-    // µÚÈı²½Îªecharts¶ÔÏó¼ÓÔØÊı¾İ
-    myChart.setOption(option);
-}
-function bb () {
-
-    //µÚ¶ş²½ »ùÓÚ×¼±¸ºÃµÄdom£¬³õÊ¼»¯echartsÍ¼±í
-    var myChart = echarts.init(document.getElementById('chart2'));
-
-    option = {
-        title : {
-            text: 'Ä³Õ¾µãÓÃ»§·ÃÎÊÀ´Ô´',
-            subtext: '´¿ÊôĞé¹¹',
-            x:'center'
-        },
-        tooltip : {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
-        },
-        legend: {
-            orient : 'vertical',
-            x : 'left',
-            data:['Ö±½Ó·ÃÎÊ','ÓÊ¼şÓªÏú','ÁªÃË¹ã¸æ','ÊÓÆµ¹ã¸æ','ËÑË÷ÒıÇæ']
-        },
-        toolbox: {
-            show : true,
-            feature : {
-                mark : {show: true},
-                dataView : {show: true, readOnly: false},
-                magicType : {
-                    show: true,
-                    type: ['pie', 'funnel'],
-                    option: {
-                        funnel: {
-                            x: '25%',
-                            width: '50%',
-                            funnelAlign: 'left',
-                            max: 1548
-                        }
-                    }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'æˆäº¤',
+                    type:'line',
+                    smooth:true,
+                    itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                    data:[10, 12, 21, 54, 260, 830, 710]
                 },
-                restore : {show: true},
-                saveAsImage : {show: true}
-            }
-        },
-        calculable : true,
-        series : [
-            {
-                name:'·ÃÎÊÀ´Ô´',
-                type:'pie',
-                radius : '55%',
-                center: ['50%', '60%'],
-                data:[
-                    {value:335, name:'Ö±½Ó·ÃÎÊ'},
-                    {value:310, name:'ÓÊ¼şÓªÏú'},
-                    {value:234, name:'ÁªÃË¹ã¸æ'},
-                    {value:135, name:'ÊÓÆµ¹ã¸æ'},
-                    {value:1548, name:'ËÑË÷ÒıÇæ'}
-                ]
-            }
-        ]
-    };
+                {
+                    name:'é¢„è´­',
+                    type:'line',
+                    smooth:true,
+                    itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                    data:[30, 182, 434, 791, 390, 30, 10]
+                },
+                {
+                    name:'æ„å‘',
+                    type:'line',
+                    smooth:true,
+                    itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                    data:[1320, 1132, 601, 234, 120, 90, 20]
+                }
+            ]
+        };
+        myChart.setOption(option);
+    }
 
+);
 
-    // µÚÈı²½Îªecharts¶ÔÏó¼ÓÔØÊı¾İ
-    myChart.setOption(option);
-}
+});
+
