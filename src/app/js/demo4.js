@@ -1,7 +1,7 @@
 /**
  * Created by avc on 2015/6/15.
  */$(function () {
-    var allOption = document.createElement("option");//Ò³Ãæ¼ÓÔØÍê£¬×ßÕâÒ»²½£¬document.ready
+    var allOption = document.createElement("option");//Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê£¬ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½document.ready
     require.config({
         paths: {
             echarts: './bower_components/echarts/build/dist'
@@ -10,7 +10,7 @@
     require(
         [
             'echarts',
-            'echarts/chart/line',   // °´Ğè¼ÓÔØËùĞèÍ¼±í£¬ÈçĞè¶¯Ì¬ÀàĞÍÇĞ»»¹¦ÄÜ£¬±ğÍüÁËÍ¬Ê±¼ÓÔØÏàÓ¦Í¼±í
+            'echarts/chart/line',   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½è¶¯Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½Ğ»ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦Í¼ï¿½ï¿½
             'echarts/chart/pie'
         ],
         function (ec) {
